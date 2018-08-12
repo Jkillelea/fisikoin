@@ -19,9 +19,27 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/grayscale.min.css" rel="stylesheet">
+    <link href="css/grayscale.css" rel="stylesheet">
 
   </head>
+  <script>
+var deadline = new Date("Aug 18, 2018 15:37:25").getTime();
+var x = setInterval(function() {
+var now = new Date().getTime();
+var t = deadline - now;
+var days = Math.floor(t / (1000 * 60 * 60 * 24));
+var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
+var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+var seconds = Math.floor((t % (1000 * 60)) / 1000);
+document.getElementById("counter").innerHTML = days + "d "
++ hours + "h " + minutes + "m " + seconds + "s ";
+    if (t < 0) {
+        clearInterval(x);
+        document.getElementById("counter").innerHTML = "EXPIRED";
+    }
+}, 1000);
+</script>
+
 
   <body id="page-top">
 
@@ -39,8 +57,9 @@
               <a class="nav-link js-scroll-trigger" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
+              <a class="nav-link js-scroll-trigger" href="#projects">Learn More</a>
             </li>
+
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
             </li>
@@ -59,14 +78,43 @@
         </div>
       </div>
     </header>
+    <!-- Signup Section -->
+    <section id="signup" class="signup-section">
+      <div class="container">
+          <p id="counter"></p>
+        <div class="row">
+          <div class="col-md-10 col-lg-8 mx-auto text-center">
 
+            <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+            <h2 class="text-white mb-5">Be Part of History</h2>
+            <p class="text-white-50">Be a part of our ICO as we meet in a Home Depot parking lot in Modesto to begin the witnessing of the first mined coin.The resulting coin will be recorded into the blockchain.</p>
+
+
+            <form class="form-inline d-flex">
+              <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Enter email address...">
+              <button type="submit" class="btn btn-primary mx-auto">Sign Up!</button>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
     <!-- About Section -->
     <section id="about" class="about-section text-center">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
+            <img src="img/Coins-2-icon.png" class="img-fluid" div style="padding-bottom:5pc" alt="">
+
             <h2 class="text-white mb-4">How It Works</h2>
             <p class="text-white-50">Fisikoin applies the superior security of the blockchain to physical currency in order to create a disruptive platform capable of revolutionizing the future of global exchange.</p>
+              <img src="img/Book-icon.png" class="img-fluid" div style="padding-bottom:5pc" alt="">
+            <h2 class="text-white mb-4">The Next Generation</h2>
+            <p class="text-white-50">Moving on from tradition methonds of preserving the blockchain, our blockchain is saved on material paper. It cannot be reached easily as it is stored in a binder with a log of every transaction.</p>
+              <img src="img/Dollar-Sign-2-icon.png" class="img-fluid" alt="">
+            <h2 class="text-white mb-4">Real Proof of Work</h2>
+            <p class="text-white-50">Every coin must be handcrafted, witnessed, and recorded by each current user of Fisikoin. The intrisic value of each coin is entirely dependent on the time and craft quality of the produced coin.</p>
           </div>
         </div>
         <img src="img/ipad.png" class="img-fluid" alt="">
@@ -78,9 +126,9 @@
       <div class="container">
 
         <!-- Featured Project Row -->
-        <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-          <div class="col-xl-8 col-lg-7">
-            <img class="img-fluid mb-3 mb-lg-0" src="img/bg-masthead.jpg" alt="">
+        <div class="row align-items-center no-gutters mb-4 mb-lg-5"  div style="align-items:center">
+          <div class="col-xl-8 col-lg-7" align="center">
+            <img class="img-fluid mb-3 mb-lg-0" src="img/icons8-open-source-500.png" alt="">
           </div>
           <div class="col-xl-4 col-lg-5">
             <div class="featured-text text-center text-lg-left">
@@ -91,9 +139,9 @@
         </div>
 
         <!-- Project One Row -->
-        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-          <div class="col-lg-6">
-            <img class="img-fluid" src="img/Safe-Box-2-icon.png" alt="" align="center">
+        <div class="row justify-content-center no-gutters mb-5 mb-lg-0" div style="align-items:center">
+          <div class="col-lg-6" align="center">
+            <img class="img-fluid" src="img/Safe-Box-2-icon.png" alt="" div style="width:40%;align:center" >
           </div>
           <div class="col-lg-6">
             <div class="bg-black text-center h-100 project">
@@ -109,16 +157,16 @@
         </div>
 
         <!-- Project Two Row -->
-        <div class="row justify-content-center no-gutters">
-          <div class="col-lg-6">
-            <img class="img-fluid" src="img/demo-image-02.jpg" alt="">
+        <div class="row justify-content-center no-gutters" div style="align-items:center" >
+          <div class="col-lg-6" align="center">
+            <img class="img-fluid" src="img/Coins-icon.png" alt="" div style="width:40%;align:center">
           </div>
           <div class="col-lg-6 order-lg-first">
             <div class="bg-black text-center h-100 project">
               <div class="d-flex h-100">
                 <div class="project-text w-100 my-auto text-center text-lg-right">
-                  <h4 class="text-white">Mountains</h4>
-                  <p class="mb-0 text-white-50">Backed up by a world class binder, Fisikoin offers robust and unbreakable security for a modern world.</p>
+                  <h4 class="text-white">Invest with Ease</h4>
+                  <p class="mb-0 text-white-50">Our ICO is designed to be a safe place to gaurd that inheritance your family gave you. It will be safe forever.</p>
                   <hr class="d-none d-lg-block mb-0 mr-0">
                 </div>
               </div>
@@ -129,30 +177,11 @@
       </div>
     </section>
 
-    <!-- Signup Section -->
-    <section id="signup" class="signup-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-10 col-lg-8 mx-auto text-center">
 
-            <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-            <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
-
-            <form class="form-inline d-flex">
-              <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Enter email address...">
-              <button type="submit" class="btn btn-primary mx-auto">Subscribe</button>
-            </form>
-
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- Contact Section -->
     <section class="contact-section bg-black">
       <div class="container">
-
-      <!-- <h2 class="text-white mb-5">Contact Us</h2> -->
 
         <div class="row">
 
@@ -186,7 +215,7 @@
                 <i class="fas fa-mobile-alt text-primary mb-2"></i>
                 <h4 class="text-uppercase m-0">Phone</h4>
                 <hr class="my-4">
-                <div class="small text-black-50">+1 (555) 867-5309</div>
+                <div class="small text-black-50">+1 (555) 902-8832</div>
               </div>
             </div>
           </div>
@@ -210,7 +239,7 @@
     <!-- Footer -->
     <footer class="bg-black small text-center text-white-50">
       <div class="container">
-        Copyright &copy; Your Website 2018
+        Copyright &copy; Fisikoin 2018
       </div>
     </footer>
 
